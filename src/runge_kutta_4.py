@@ -3,10 +3,19 @@ import numpy as np
 
 def rk4(func, a, b, y, N):
     '''
-    Function apporximates y(x) using Runge-Kutta 4 at various mesh point along the interval [a,b].
-    Example function is y' = f(x,y) = y - x where parameter func would be y - x.
-    Parameters: func, initial (a) and final (b) points of interval, initial y (as list), N (number of steps)
+    Function apporximates y(x) using Runge-Kutta 4 method along the interval [a,b].
+
+    Args:
+        func:  Function to be estimated.  Example; y' = f(x,y) = y - x.
+        a: Initial point
+        b: Final point
+        y: List containg the initial value of y.
+        N: Number of desired steps.
+
+    Returns:
+       y:  List of values of y_i
     '''
+
     h = (b - a) / N
     x = np.linspace(a, b, N+1)
 
