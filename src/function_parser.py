@@ -1,4 +1,4 @@
-def func_parser(func, x, y):
+def func_parser(func, y, x):
     '''
     Eval function.
     '''
